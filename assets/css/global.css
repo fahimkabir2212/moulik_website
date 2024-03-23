@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap");
+
+:root {
+  --black: #0e0e0e;
+  --white: #ffffff;
+  --white-grey: #c8c8c881;
+  --grey: #939393;
+  --barlow-font: "Barlow", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--barlow-font);
+  font-size: 10px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* font-weign */
+.fw-600 {
+  font-weight: 600;
+}
+/* SECTION */
+
+.section {
+  margin-bottom: 4rem;
+}
+
+/* CONTAINER */
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 2rem 2rem;
+}
+
+/* MARGIN */
+.mb-1x {
+  margin-bottom: 1rem;
+}
+.mb-2x {
+  margin-bottom: 2rem;
+}
+.mt-1x {
+  margin-bottom: 1rem;
+}
+.mt-2x {
+  margin-bottom: 2rem;
+}
+
+/* BUTTON */
+.btn {
+  font-family: var(--playfair-font);
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  opacity: 90%;
+}
+
+.btn-secondary {
+  color: var(--black);
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--black);
+  margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+  color: var(--white);
+  background-color: var(--black);
+  color: white;
+}
+.btn-secondary a:hover {
+  color: white;
+}
+
+/* Ancor Tag */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HEADING */
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 700px) and (min-width: 550px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 1150px) and (min-width: 500px) {
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section {
+    margin-bottom: 0;
+  }
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
