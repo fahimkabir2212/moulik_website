@@ -3,79 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moulik Studio</title>
-    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/media-query.css" />
-    <!-- JQUERY -->
-    <script src="/assets/js/jquery/jquery.js"></script>
+    <title>Moulik</title>
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- SWIPER -->
-    <link rel="stylesheet" href="/assets/css/swiper/swiper.css" />
-    <script src="/assets/js/swiper/swiper.js"></script>
-    <script src="/assets/js/slider.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Demo styles -->
+    <style>
+      .swiper-wrapper {
+        max-width: 90vw;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
-    <!-- NAV BAR -->
-    <nav class="navbar">
-      <div class="nav-elements">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <!-- END NAV BAR -->
-    <!-- HERO HEADER -->
-    <section class="section-hero">
-      <div class="h-100 swiper-container">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="hero-header container">
-              <div class="hero-content">
-                <!-- Your content for slide 1 -->
-                <h1 class="hero-heading mb-1x">
-                  Comprehensive
-                  <span class="font-color-purple"> Diabetes</span> Health
-                  <span class="font-color-purple"> Check</span>.
-                </h1>
-                <p class="hero-description mb-1x">
-                  Comprehensive consultation with Diabetology Specialist and
-                  Nutritionist, involving a wide-ranging diagnostic panel for
-                  personalized health insights and recommendations.
-                </p>
-                <button class="btn btn-primary mb-1x">Learn More</button>
-              </div>
-              <div class="image">
-                <img src="./resources/images/featured-img1.jpeg" alt="" />
-              </div>
+    <main>
+      <header class="section-hero-header">
+        <div class="hero-header">
+          <nav class="nav-bar">
+            <div class="logo">
+              <!-- Logo -->
+              <img src="./assets/logos/moulik-logo-white.png" alt="" />
             </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="hero-header container">
-              <div class="hero-content">
-                <!-- Your content for slide 1 -->
-                <h1 class="hero-heading mb-1x">
-                  Comprehensive
-                  <span class="font-color-purple"> Diabetes</span> Health
-                  <span class="font-color-purple"> Check</span>.
-                </h1>
-                <p class="hero-description mb-1x">
-                  Comprehensive consultation with Diabetology Specialist and
-                  Nutritionist, involving a wide-ranging diagnostic panel for
-                  personalized health insights and recommendations.
-                </p>
-                <button class="btn btn-primary mb-1x">Learn More</button>
+            <div class="socials">
+              <!-- Social Links -->
+              <a href="#">
+                <img src="./assets/icons/social_icons/pinterest.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/social_icons/linkedin.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/social_icons/instagram.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/social_icons/facebook.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/icons/social_icons/twitterx.svg" alt="" />
+              </a>
+            </div>
+          </nav>
+          <div class="hero-slider">
+            <!-- SLIDER -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
               </div>
-              <div class="image">
-                <img src="./resources/images/featured-img1.jpeg" alt="" />
-              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- END - HERO HEADER -->
+      </header>
+    </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          },
+        },
+      });
+    </script>
   </body>
 </html>
